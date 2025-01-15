@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../assets/logo.svg'; // Assuming logo.svg is in the assets folder
-import { FaArrowRight, FaBars, FaTimes } from 'react-icons/fa'; // For icons
+import { FaArrowRight } from 'react-icons/fa'; // For icons
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,10 +45,29 @@ const Navbar = () => {
         {/* Right - Hamburger Menu for Small Devices */}
         <div className="md:hidden flex items-center space-x-4">
           <button
-            className="text-gray-800 hover:text-green-600 transition-all duration-200 focus:outline-none"
+            className="text-gray-800 hover:text-green-600 transition-all duration-200 focus:outline-none relative"
             onClick={toggleMenu}
           >
-            {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            {/* Top Line */}
+            <div
+              className={`w-6 h-0.5 bg-gray-800 transition-all duration-500 absolute transform ${
+                isMenuOpen ? 'rotate-45 top-0' : '-top-1.5'
+              }`}
+            ></div>
+
+            {/* Middle Line */}
+            <div
+              className={`w-6 h-0.5 bg-gray-800 transition-all duration-500 ${
+                isMenuOpen ? 'opacity-0' : ''
+              }`}
+            ></div>
+
+            {/* Bottom Line */}
+            <div
+              className={`w-6 h-0.5 bg-gray-800 transition-all duration-500 absolute transform ${
+                isMenuOpen ? '-rotate-45 bottom-0' : 'top-1.5'
+              }`}
+            ></div>
           </button>
         </div>
 
@@ -70,7 +89,7 @@ const Navbar = () => {
       <div
         className={`${
           isMenuOpen ? 'max-h-screen' : 'max-h-0'
-        } overflow-hidden transition-all duration-300 md:hidden`}
+        } overflow-hidden transition-all duration-1000 md:hidden`}
       >
         <div className="flex flex-col space-y-4 mt-4 text-gray-800">
           <Link

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { motion } from "framer-motion";
 import { ReactComponent as Icon } from '../assets/icons/icon.svg'; // Import SVG as a component
 import { ReactComponent as EventIcon } from '../assets/icons/5+eventsicon.svg';
@@ -30,6 +31,9 @@ const buttonHover = {
 
 
 const Home = () => {
+  useEffect(() => {
+    window.onload = () => window.scrollTo(0, 0);
+  }, []);
   return (
     <>
      <motion.div
@@ -269,13 +273,14 @@ const Home = () => {
         </p>
       </div>
       <div className="flex flex-col sm:flex-row gap-4">
-        <div className="inline-flex items-center py-3 text-lg font-medium text-gfgsc-green transition duration-300 group">
-          Explore Domains
-          <FaArrowRight
-  className="ml-2 text-xl transform group-hover:translate-x-1 transition-transform"
-  size="1em"
-/>
-        </div>
+      <div className="inline-flex items-center py-3 px-6 text-lg font-medium text-gfgsc-green transition-all duration-300 group border-2 border-gfgsc-green rounded-full cursor-pointer hover:bg-gfgsc-green hover:text-white hover:scale-105">
+  Explore Domains
+  <FaArrowRight
+    className="ml-2 text-xl transform group-hover:translate-x-2  transition-all duration-300 ease-in-out"
+    size="1em"
+  />
+</div>
+
       </div>
     </div>
   </div>
