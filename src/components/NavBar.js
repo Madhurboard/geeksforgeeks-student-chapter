@@ -91,7 +91,7 @@ const Navbar = () => {
           isMenuOpen ? 'max-h-screen' : 'max-h-0'
         } overflow-hidden transition-all duration-1000 md:hidden`}
       >
-        <div className="flex flex-col space-y-4 mt-4 text-gray-800">
+        <div className="flex flex-col space-y-4 mt-4 text-gray-800 font-poppins">
           <Link
             to="/events"
             className="hover:bg-gray-200 hover:rounded-full px-3 py-1 transition-all duration-200 text-inherit no-underline"
