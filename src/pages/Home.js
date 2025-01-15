@@ -1,6 +1,15 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { ReactComponent as Icon } from '../assets/icon.svg'; // Import SVG as a component
+import { ReactComponent as Icon } from '../assets/icons/icon.svg'; // Import SVG as a component
+import { ReactComponent as EventIcon } from '../assets/icons/5+eventsicon.svg';
+import { ReactComponent as Members } from '../assets/icons/membericon.svg';
+import { ReactComponent as ContestIcon } from '../assets/icons/regularcontests.svg';
+import { ReactComponent as Build } from '../assets/icons/Build.svg';
+import { ReactComponent as Connect } from '../assets/icons/Connect.svg';
+import { ReactComponent as Learn } from '../assets/icons/Learn.svg';
+import { FaArrowRight } from 'react-icons/fa'; // For icons
+
+
 import './Home.css';
 import LandingScroll from '../components/landing-scroll'; // Import LandingScroll component
 
@@ -87,52 +96,31 @@ const Home = () => {
   {[
     {
       icon: (
-        <svg
-          stroke="currentColor"
-          fill="currentColor"
-          strokeWidth="0"
-          viewBox="0 0 640 512"
-          className="text-gfgsc-green w-4 h-4 sm:w-5 sm:h-5"
-          height="1em"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"></path>
-        </svg>
+        <Members
+    className="text-gfgsc-green w-4 h-4 sm:w-5 sm:h-5"
+    height="1em"
+    width="1em"
+  />
       ),
       text: "40+ Members",
     },
     {
       icon: (
-        <svg
-          stroke="currentColor"
-          fill="currentColor"
-          strokeWidth="0"
-          viewBox="0 0 640 512"
-          className="text-gfgsc-green w-4 h-4 sm:w-5 sm:h-5"
-          height="1em"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"></path>
-        </svg>
+        <EventIcon
+    className="text-gfgsc-green w-4 h-4 sm:w-5 sm:h-5"
+    height="1em"
+    width="1em"
+  />
       ),
       text: "5+ Events",
     },
     {
       icon: (
-        <svg
-          stroke="currentColor"
-          fill="currentColor"
-          strokeWidth="0"
-          viewBox="0 0 640 512"
-          className="text-gfgsc-green w-4 h-4 sm:w-5 sm:h-5"
-          height="1em"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path>
-        </svg>
+        <ContestIcon
+    className="text-gfgsc-green w-4 h-4 sm:w-5 sm:h-5"
+    height="1em"
+    width="1em"
+  />
       ),
       text: "Regular Contests",
     },
@@ -212,11 +200,13 @@ const Home = () => {
      {/* Grid section with cards */}
      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
        {/* Learn card */}
-       <div className="group relative bg-white p-6 rounded-xl hover:rounded-b-md border border-gray-100 hover:border-green-200 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
-         <div className="flex items-center justify-center w-12 h-12 bg-green-50 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
-           <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 640 512" className="text-gfgsc-green" height="28" width="28" xmlns="http://www.w3.org/2000/svg">
-             <path d="M622.34 153.2L343.4 67.5c-15.2-4.67-31.6-4.67-46.79 0L17.66 153.2c-23.54 7.23-23.54 38.36 0 45.59l48.63 14.94c-10.67 13.19-17.23 29.28-17.88 46.9C38.78 266.15 32 276.11 32 288c0 10.78 5.68 19.85 13.86 25.65L20.33 428.53C18.11 438.52 25.71 448 35.94 448h56.11c10.24 0 17.84-9.48 15.62-19.47L82.14 313.65C90.32 307.85 96 298.78 96 288c0-11.57-6.47-21.25-15.66-26.87.76-15.02 8.44-28.3 20.69-36.72L296.6 284.5c9.06 2.78 26.44 6.25 46.79 0l278.95-85.7c23.55-7.24 23.55-38.36 0-45.6zM352.79 315.09c-28.53 8.76-52.84 3.92-65.59 0l-145.02-44.55L128 384c0 35.35 85.96 64 192 64s192-28.65 192-64l-14.18-113.47-145.03 44.56z"></path>
-           </svg>
+       <div className="group relative bg-white p-6 rounded-xl border border-gray-100 shadow-sm transition-all duration-300 overflow-hidden hover:shadow-lg hover:scale-105 hover:border-green-200">
+  <div className="flex items-center justify-center w-12 h-12 bg-green-50 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+  <Learn
+  className="text-gfgsc-green"
+  height="28"
+  width="28"
+/>
          </div>
          <h3 className="text-xl font-semibold text-gray-900 mb-2">Learn</h3>
          <p className="text-gray-600">Hone your competitive programming skills through contests and solution discussions.</p>
@@ -224,23 +214,28 @@ const Home = () => {
        </div>
 
        {/* Build card */}
-       <div className="group relative bg-white p-6 rounded-xl hover:rounded-b-md border border-gray-100 hover:border-green-200 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
-         <div className="flex items-center justify-center w-12 h-12 bg-green-50 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
-           <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 640 512" className="text-gfgsc-green" height="28" width="28" xmlns="http://www.w3.org/2000/svg">
-             <path d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path>
-           </svg>
-         </div>
-         <h3 className="text-xl font-semibold text-gray-900 mb-2">Build</h3>
-         <p className="text-gray-600">Work on real-world projects and enhance your development skills.</p>
-         <div className="absolute bottom-0 left-0 w-full h-1 bg-gfgsc-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-b-sm"></div>
-       </div>
+       <div className="group relative bg-white p-6 rounded-xl border border-gray-100 shadow-sm transition-all duration-300 overflow-hidden hover:shadow-lg hover:scale-105 hover:border-green-200">
+  <div className="flex items-center justify-center w-12 h-12 bg-green-50 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+  <Build
+  className="text-gfgsc-green"
+  height="28"
+  width="28"
+/>
+  </div>
+  <h3 className="text-xl font-semibold text-gray-900 mb-2">Build</h3>
+  <p className="text-gray-600">Work on real-world projects and enhance your development skills.</p>
+  <div className="absolute bottom-0 left-0 w-full h-1 bg-gfgsc-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-b-sm"></div>
+</div>
+
 
        {/* Connect card */}
-       <div className="group relative bg-white p-6 rounded-xl hover:rounded-b-md border border-gray-100 hover:border-green-200 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
-         <div className="flex items-center justify-center w-12 h-12 bg-green-50 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
-           <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 640 512" className="text-gfgsc-green" height="28" width="28" xmlns="http://www.w3.org/2000/svg">
-             <path d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z"></path>
-           </svg>
+       <div className="group relative bg-white p-6 rounded-xl border border-gray-100 shadow-sm transition-all duration-300 overflow-hidden hover:shadow-lg hover:scale-105 hover:border-green-200">
+       <div className="flex items-center justify-center w-12 h-12 bg-green-50 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+       <Connect
+  className="text-gfgsc-green"
+  height="28"
+  width="28"
+/>
          </div>
          <h3 className="text-xl font-semibold text-gray-900 mb-2">Connect</h3>
          <p className="text-gray-600">Join a community of passionate student developers</p>
@@ -276,26 +271,18 @@ const Home = () => {
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="inline-flex items-center py-3 text-lg font-medium text-gfgsc-green transition duration-300 group">
           Explore Domains
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            strokeWidth="0"
-            viewBox="0 0 24 24"
-            className="ml-2 text-xl transform group-hover:translate-x-1 transition-transform"
-            height="1em"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
-          </svg>
+          <FaArrowRight
+  className="ml-2 text-xl transform group-hover:translate-x-1 transition-transform"
+  size="1em"
+/>
         </div>
       </div>
     </div>
   </div>
   <div className="flex-1 p-8 lg:p-12 bg-gray-50">
   <div className="grid gap-6 h-full">
-    <div className="p-6 rounded-xl bg-blue-50 backdrop-blur-sm transition-all duration-300 hover:shadow-md">
-      <div className="flex items-center gap-4 mb-3">
+  <div className="p-6 rounded-xl bg-blue-50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-blue-100">
+  <div className="flex items-center gap-4 mb-3 transition-transform duration-300 group-hover:scale-110">
         <svg
           stroke="currentColor"
           fill="currentColor"
@@ -319,8 +306,8 @@ const Home = () => {
       </div>
     </div>
 
-    <div className="p-6 rounded-xl bg-green-50 backdrop-blur-sm transition-all duration-300 hover:shadow-md">
-      <div className="flex items-center gap-4 mb-3">
+    <div className="p-6 rounded-xl bg-green-50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-green-100">
+    <div className="flex items-center gap-4 mb-3 transition-transform duration-300 group-hover:scale-110">
         <svg
           stroke="currentColor"
           fill="currentColor"
@@ -344,8 +331,8 @@ const Home = () => {
       </div>
     </div>
 
-    <div className="p-6 rounded-xl bg-purple-50 backdrop-blur-sm transition-all duration-300 hover:shadow-md">
-      <div className="flex items-center gap-4 mb-3">
+    <div className="p-6 rounded-xl bg-purple-50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-purple-100">
+    <div className="flex items-center gap-4 mb-3 transition-transform duration-300 group-hover:scale-110">
         <svg
           stroke="currentColor"
           fill="currentColor"
@@ -369,8 +356,8 @@ const Home = () => {
       </div>
     </div>
 
-    <div className="p-6 rounded-xl bg-orange-50 backdrop-blur-sm transition-all duration-300 hover:shadow-md">
-      <div className="flex items-center gap-4 mb-3">
+<div className="p-6 rounded-xl bg-orange-50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-orange-100">
+  <div className="flex items-center gap-4 mb-3 transition-transform duration-300 group-hover:scale-110">
         <svg
           stroke="currentColor"
           fill="currentColor"
@@ -393,8 +380,8 @@ const Home = () => {
       </div>
     </div>
 
-    <div className="p-6 rounded-xl bg-pink-50 backdrop-blur-sm transition-all duration-300 hover:shadow-md">
-      <div className="flex items-center gap-4 mb-3">
+    <div className="p-6 rounded-xl bg-pink-50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:scale-105 hover:bg-pink-100">
+  <div className="flex items-center gap-4 mb-3 transition-transform duration-300 group-hover:scale-110">
         <svg
           stroke="currentColor"
           fill="currentColor"
